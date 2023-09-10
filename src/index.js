@@ -1,11 +1,11 @@
 import express from "express";
 import paymentRoutes from './routes/payment.routes.js'
-
+import { PORT } from './config.js'
 const app = express()
 
 
 
-app.listen(process.env.PORT || 3000, () => {})
+app.listen(PORT, () => {})
 console.log('Server on Port', 3000);
 
 app.use(express.json())
