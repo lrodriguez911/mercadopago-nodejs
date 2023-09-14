@@ -36,7 +36,12 @@ export const success = async (req, res) => {
                 currency_id: "ARS",
                 quantity: 1
             }
-        ]
+        ],
+        back_urls: {
+            success: "http://localhost:3000/success",
+            failure: "http://localhost:3000/failure",
+            pending: "http://localhost:3000/pending"
+        }
     })
 
     res.send("success  order")
