@@ -5,4 +5,6 @@ checkout.addEventListener("click", async () => {
         method: "POST",
     })
     const data = await response.json()
+    window.location.href = data.init_point
+
 })

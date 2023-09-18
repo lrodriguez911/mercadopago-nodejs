@@ -1,5 +1,5 @@
 import mercadopago from "mercadopago";
-
+import { HOST } from "../config";
 
 export const createOrder = async (req, res) => {
     
@@ -18,9 +18,9 @@ export const createOrder = async (req, res) => {
             }
         ],
         back_urls: {
-                        success: "http://localhost:3000/success",
-                        failure: "http://localhost:3000/failure",
-                        pending: "http://localhost:3000/pending"
+                        success: `${HOST}/success`,
+                        failure: `${HOST}/failure`,
+                        pending: `${HOST}/pending`,
                     },
         notification_url: "http://localhost:3000/webhook",
     })
